@@ -190,3 +190,8 @@ body {
 .c-weather__infos .c-weather__action .c-weather__action-button:hover {
   color: var(--color-primary);
 }
+
+.weather__description {
+  display: flex;
+  align-items: center;
+}
