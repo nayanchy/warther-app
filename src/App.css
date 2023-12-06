@@ -39,7 +39,7 @@ body {
 .c-weather {
   display: grid;
   grid-template-columns: auto;
-  width: 800px;
+  width: 900px;
   max-width: 80%;
   color: var(--color-light);
   background-color: var(--color-dark);

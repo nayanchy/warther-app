@@ -23,9 +23,9 @@ const Weather = ({ children }) => {
     const fetchWeather = async () => {
       try {
         const res = await fetch(
-          `https://api.weatherapi.com/v1/current.json?key=${KEY}&q=${Number(
+          `https://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=&q=${Number(
             location.latitude
-          )},${Number(location.longitude)}`,
+          )},${Number(location.longitude)}&days=4&aqi=no&alerts=no`,
           {
             mode: "cors",
           }
@@ -41,8 +41,6 @@ const Weather = ({ children }) => {
     }
   }, [location]);
 
-  console.log(weatherData);
-
   return (
     <div className="c-weather">
       {weatherData && (
@@ -52,7 +50,10 @@ const Weather = ({ children }) => {
             condition={weatherData.current.condition}
             temp={weatherData.current.temp_c}
           />
-          <WeatherInfo weather={weatherData.current} />
+          <WeatherInfo
+            weather={weatherData.current}
+            forecast={weatherData.forecast.forecastday}
+          />
         </>
       )}
     </div>
