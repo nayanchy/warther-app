@@ -4,7 +4,6 @@ const WeatherForecast = ({ forecast }) => {
   return (
     <ul className="c-weather__weeklist">
       {forecast.map((data, i) => {
-        console.log(data);
         const dateString = data.date;
         const date = new Date(dateString);
         const dayOfMonth = date.getDate();
