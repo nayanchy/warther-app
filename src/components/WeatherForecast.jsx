@@ -1,7 +1,6 @@
 import WeatherForecastItem from "./WeatherForecastItem";
 
 const WeatherForecast = ({ forecast }) => {
-  console.log(forecast);
   return (
     <ul className="c-weather__weeklist">
       {forecast.map((data, i) => {
